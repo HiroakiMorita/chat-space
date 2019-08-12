@@ -26,7 +26,6 @@
 |------|----|-------|
 |title|text|null: false|
 ### Association
-- belomgs_to :user
 - has_many :messages
 - has_many :groups_users
 - has_many :users, through: :groups_users
@@ -40,3 +39,4 @@
 
 ### Association
 - belongs_to :group
+- belongs_to :user
