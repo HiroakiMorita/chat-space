@@ -9,7 +9,7 @@
 - has_many :groups_users
 - has_many :groups, through: :groups_users
 
-## messageテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|
@@ -24,7 +24,7 @@
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
+|name|string|null: false, index: true|
 ### Association
 - has_many :messages
 - has_many :groups_users
