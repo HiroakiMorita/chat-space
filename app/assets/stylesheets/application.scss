@@ -1,5 +1,18 @@
-@import "./reset";
-@import "_variable";
-@import "_reset.scss";
+@import "variable";
 @import 'font-awesome';
+@import 'user';
+@import "flash";
+@import "group";
+@import "mixin";
+@import "colors";
+@import "font-size";
+@import "reset";
+@import "vendor_prefix";
+@import "side_bar";
+// @import 'chat';
 @import 'messages';
+
+// @import "colors";
+// @import 'messages';
+// // @import "_reset.scss";
+// @import "./reset";
