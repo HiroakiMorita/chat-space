@@ -6,14 +6,6 @@ class MessagesController < ApplicationController
     @messages = @group.messages.includes(:user)
   end
 
-  # def create
-  #   @message = @group.messages.new(message_params)
-  #   if @message.save
-  #   respond_to do |format|
-  #     format.html { redirect_to group_messages_path(params[:group_id])  }
-  #     format.json
-  #   end
-  # end
   def create
     @message = Message.new(message_params)
     @message.user_id = current_user.id
@@ -24,7 +16,6 @@ class MessagesController < ApplicationController
         format.json
       end
     else
-      flash.now[:alert] = "メッセージを入力してください"
       redirect_to group_messages_path(params[:group_id])
     end
   end

@@ -20,7 +20,7 @@ describe MessagesController do
         expect(assigns(:group)).to eq group
       end
 
-      it 'redners index' do
+      it 'renders index' do
         expect(response).to render_template :index
       end
     end
