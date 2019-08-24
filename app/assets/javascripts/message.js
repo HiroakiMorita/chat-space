@@ -38,6 +38,7 @@ $(function(){
     .done(function(message){
       var html = buildHTML(message);
       $('.messages').append(html);
+      $('#message_content').val('');
       $('#new_message').get(0).reset();
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
