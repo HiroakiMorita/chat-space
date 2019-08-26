@@ -6,14 +6,18 @@
 
       .main-header__left-box
         %h2.main-header__left-box__current-group
-          もり
+          = @group.name
         %ul.main-header__left-box__member-list
           Member：
-          %li.main-header__left-box__member-list__member
-            メンバー①
-          %a{:href => "/groups/3114/edit"}
-      .main-header__edit-btn Edit
 
+          %li.main-header__left-box__member-list__member
+          -@group.group_users.each do |group_user|
+            = group_user.user.name
+      = link_to edit_group_path(@group) do
+
+        .main-header__edit-btn Edit
+ 
+            
       -# .left-header
       -#   %h2.left-headertitle{"data-group_id" => "3114"}
       -#   %ul.left-header-members
