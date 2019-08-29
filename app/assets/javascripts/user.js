@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load' ,function() {
 
   var search_list = $("#user-search-result");
   var member_list = $("#member_search_result");
@@ -58,7 +58,13 @@ $(function() {
       })
     });
 
-
+    // $(function(){
+    //   $(".user-seach-result").on('click', '.user-search-add', function() {
+    //     var name = $(this).data("user-name");
+    //     var user_id = $(this).data("user-id");
+    //     $(this).parent().remove();
+    //     appendMembers(name, user_id);
+    //   });
     $(function(){
       $(document).on('click', '.user-search-add', function() {
         var name = $(this).data("user-name");
@@ -73,11 +79,3 @@ $(function() {
     });
   });
 });
-
-    // $(function(){
-    //   $(".user-seach-result").on('click', '.user-search-add', function() {
-    //     var name = $(this).data("user-name");
-    //     var user_id = $(this).data("user-id");
-    //     $(this).parent().remove();
-    //     appendMembers(name, user_id);
-    //   });
