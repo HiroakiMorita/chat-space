@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load' ,function() {
+$(function() {
 
   var search_list = $("#user-search-result");
   var member_list = $("#member_search_result");
@@ -58,20 +58,14 @@ $(document).on('turbolinks:load' ,function() {
       })
     });
 
+
     $(function(){
-      $(".user-seach-result").on('click', '.user-search-add', function() {
+      $(document).on('click', '.user-search-add', function() {
         var name = $(this).data("user-name");
         var user_id = $(this).data("user-id");
         $(this).parent().remove();
         appendMembers(name, user_id);
       });
-    // $(function(){
-    //   $(document).on('click', '.user-search-add', function() {
-    //     var name = $(this).data("user-name");
-    //     var user_id = $(this).data("user-id");
-    //     $(this).parent().remove();
-    //     appendMembers(name, user_id);
-    //   });
 
 　    $(document).on("click", '.user-search-remove', function() {
         $(this).parent().remove();
@@ -79,3 +73,11 @@ $(document).on('turbolinks:load' ,function() {
     });
   });
 });
+
+    // $(function(){
+    //   $(".user-seach-result").on('click', '.user-search-add', function() {
+    //     var name = $(this).data("user-name");
+    //     var user_id = $(this).data("user-id");
+    //     $(this).parent().remove();
+    //     appendMembers(name, user_id);
+    //   });
