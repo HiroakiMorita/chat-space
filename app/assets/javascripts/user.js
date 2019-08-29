@@ -67,6 +67,7 @@ $(document).on('turbolinks:load' ,function() {
     //   });
     $(function(){
       $(document).on('click', '.user-search-add', function() {
+        // $(".user-seach-add").off()
         var name = $(this).data("user-name");
         var user_id = $(this).data("user-id");
         $(this).parent().remove();

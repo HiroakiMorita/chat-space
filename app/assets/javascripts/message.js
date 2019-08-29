@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-    image = message.image.url ? `<img src="${message.image.url}">` : ""
+    image = message.image ? `<img src="${message.image}">` : ""
     var html = `
     <div class='message'>
       <div class='upper-message'>
@@ -17,6 +17,7 @@ $(function(){
         </p>
         <div class='lower-message'>
         ${image}
+        
         </div>
         </div>
       </div>
@@ -51,7 +52,7 @@ $(function(){
     .always(function(){
       $('.form__submit').prop('disabled', false);
     })
-  })
+  });
 
 
 
